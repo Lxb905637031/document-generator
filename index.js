@@ -1,6 +1,7 @@
 const {
     initFolders,
-    initFiles
+    initFiles,
+    initWathcers
 } = require('./init')
 
 class ViteDocCreator {
@@ -17,7 +18,6 @@ class ViteDocCreator {
         if (options) {
             Object.assign(this.options, options)
         }
-
         // 执行工具初始化函数
         this.initialize()
     }
@@ -29,6 +29,7 @@ class ViteDocCreator {
             // 初始化项目文件
         initFiles(this.options)
             // 初始化监听html与md文件及文件夹变化
+        initWathcers(this.options)
     }
 }
 

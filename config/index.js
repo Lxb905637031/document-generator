@@ -1,7 +1,8 @@
 const { resolve } = require('path')
 
 // 默认端口号
-const port = process.env.npm_config_port
+// const port = process.env.npm_config_port || 3000
+const port = 3000
     // 默认域名
 const domain = 'http://localhost'
     // 默认标题

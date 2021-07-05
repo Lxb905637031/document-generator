@@ -2,8 +2,8 @@
 ((doc) => {
     let curIdx = 0
 
-    const oMenuList = doc.querySelector('.menu-list')
-    oMenuItems = oMenuList.querySelectorAll('.menu-item')
+    const oMenuList = doc.querySelector('.menu-list'),
+        oMenuItems = oMenuList.querySelectorAll('.menu-item')
 
     const init = () => {
         bindEvent()
@@ -14,8 +14,8 @@
     }
 
     function handleMenuClick(e) {
-        const tar = e.target
-        tagName = tar.tagName.toLowerCase()
+        const tar = e.target,
+            tagName = tar.tagName.toLowerCase()
 
         tagName === 'a' && menuChange(tar)
     }
@@ -28,5 +28,4 @@
     }
 
     init()
-
 })(document)

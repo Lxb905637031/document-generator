@@ -21,7 +21,7 @@ function createMenuItem(filename, userDomain, userPort, isActive) {
 // 创建iframe
 function createIframe(filename, userDomain, userPort) {
     return `
-        <iframe src="${_formatBaseUrl(userDomain, userPort)}/src/html/${filename}" name="myFrame"/>
+        <iframe src="${_formatBaseUrl(userDomain, userPort)}/src/html/${filename}" name="myFrame"></iframe>
     `
 }
 
