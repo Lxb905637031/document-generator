@@ -3,6 +3,8 @@ const {
     copyFileSync
 } = require('fs')
 
+const { createIndexHtml } = require('../compiler')
+
 const {
     outerPath: {
         htmlPath,
@@ -20,6 +22,7 @@ function initFiles(options) {
     copyFiles('css')
     copyFiles('js')
     copyWelcomePage()
+    createIndexHtml(options)
 }
 
 function copyFiles(field) {
@@ -53,7 +56,6 @@ function copyFiles(field) {
 
 function copyWelcomePage() {
     const _htmlFiles = readdirSync(htmlPath)
-    console.log(_htmlFiles)
     if (!_htmlFiles.length) {
         copyFileSync(htmlDir + '/welcome.html', htmlPath + '/welcome.html', 0, function(err) {
             if (err) {
